@@ -1,0 +1,48 @@
+<div class="container">
+
+    <div class="labels">
+        <mat-form-field>
+            <mat-label>Selecione o tecnico</mat-label>
+            <mat-select [(value)]="serviceOrder.technician">
+              <mat-option *ngFor="let tech of technicians" value="{{ tech.id }}">{{ tech.name }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Selecione o Cliente</mat-label>
+            <mat-select [(value)]="serviceOrder.client">
+              <mat-option *ngFor="let cli of clients" value="{{ cli.id }}">{{ cli.name }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Selecione o status</mat-label>
+            <mat-select [(value)]="serviceOrder.status">
+              <mat-option value="0">ABERTO</mat-option>
+              <mat-option value="1">EM ANDAMENTO</mat-option>
+              <mat-option value="2">ENCERRADO</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Selecione a prioridade</mat-label>
+            <mat-select [(value)]="serviceOrder.priority">
+              <mat-option value="0">BAIXA</mat-option>
+              <mat-option value="1">MEDIA</mat-option>
+              <mat-option value="2">ALTA</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+
+    <form class="form">
+      <mat-form-field class="full-width">
+        <mat-label>Observação da ordem de serviço</mat-label>
+        <textarea matInput name="observation" [(ngModel)]="serviceOrder.observation"></textarea>
+      </mat-form-field>
+      <button mat-stroked-button  color="accent" (click)="create()">Criar</button>
+      <button mat-stroked-button color="warn" (click)="cancel()" style="margin-left: 6px;">Cancelar</button>
+    
+    </form>
+
+
+</div>

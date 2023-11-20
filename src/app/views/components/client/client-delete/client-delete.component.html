@@ -1,0 +1,17 @@
+<form class="form">
+    <h1>Atualizar Novo Tecnico</h1>
+    <mat-form-field class="form-group">
+      <mat-label>Nome</mat-label>
+      <input matInput placeholder="Alemão" name="name" disabled [(ngModel)]="client.name">
+    </mat-form-field>
+    <mat-form-field class="form-group">
+        <mat-label>Cpf</mat-label>
+        <input matInput placeholder="000.000.000-00" disabled name="cpf" [(ngModel)]="client.cpf">
+    </mat-form-field>
+      <mat-form-field class="form-group">
+        <mat-label>Fone</mat-label>
+        <input matInput placeholder="(00) 00000-0000" disabled name="phone" [(ngModel)]="client.phone">
+    </mat-form-field>
+
+    <button mat-stroked-button color="accent" (click)="delete()">Deletar</button>
+    <button mat-stroked-button color="warn" (click)="cancel()" style="margin-left: 6px;">Cancelar</button>

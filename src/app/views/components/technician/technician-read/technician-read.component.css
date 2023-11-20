@@ -1,0 +1,12 @@
+.table{
+
+    width: 80%;
+    margin: 1rem auto 0 auto;
+}
+.bt-create{
+    margin-bottom: 1rem;
+}
+.bt-create a{
+    padding: .8rem;
+text-decoration: none;
+}
